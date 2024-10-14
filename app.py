@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 def get_infos():
     # Get result of url for the Caxias do Sul city
-    request = requests.get('https://api.weatherapi.com/v1/forecast.json?key=YOUR-API-KEY&q=Caxias+do+Sul&lang=pt')
+    request = requests.get('https://api.weatherapi.com/v1/forecast.json?key=77062b398241431797f20436242707&q=Caxias+do+Sul&lang=pt')
 
     # Transform to json
     dict_json = request.json()
@@ -54,7 +54,7 @@ def sendmail(day):
     mgs = EmailMessage()
     mgs['Subject'] = f'Avaliação do clima do dia {date}'
     mgs['From'] = email_address # email of who will send it
-    mgs['To'] = 'example@example.com' # email that receives the weather information
+    mgs['To'] = 'isslermatheus0@gmail.com' # email that receives the weather information
     mgs.set_content(content)
     
     # send mail
